@@ -1,7 +1,10 @@
 """
 Module containing RinexObservation object.
 """
-import logging
+__author__ = 'Costin Gamenț'
+__email__ = 'costin.gament@gmail.com'
+__license__ = 'GPL'import logging
+
 from datetime import datetime
 from rinex import Rinex
 from epoch import Epoch
@@ -163,9 +166,9 @@ class RinexObservation(Rinex):
         self.writelines(self.headerlines, f)
         self.writelines( [ self.header.headerterminator() ], f)
         # write observations
-        #for O in self.observations:
-        #    l = [ O.obslist[0].exportRinexHeader() ]
-        #    self.writelines(l, f)
+        for O in self.observations:
+            l = [ O.obslist[0].exportRinexHeader() ]
+            self.writelines(l, f)
         f.close()
         return True
     

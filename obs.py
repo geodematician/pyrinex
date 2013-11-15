@@ -1,6 +1,9 @@
 """
 Contains Observation and Observations classes.
 """
+__author__ = 'Costin Gamenț'
+__email__ = 'costin.gament@gmail.com'
+__license__ = 'GPL'
 
 from epoch import Epoch
 
